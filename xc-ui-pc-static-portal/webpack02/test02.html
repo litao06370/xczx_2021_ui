@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+
+</head>
+<body>
+<div id="myApp">
+    <div style="font-size: 50px;color: blue" v-text="name"></div>
+    <!--<div style="font-size: 50px;color: #00a4ff">{{name}}</div>-->
+    <input type="text" v-model="num1"/>+
+    <input type="text" v-model="num2"/>=
+    <span v-text="result"></span>
+    <button v-on:click="add()">计算</button>
+
+</div>
+</body>
+<!-- <script  src="build.js" ></script> -->
+
+</html>
