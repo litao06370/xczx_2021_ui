@@ -31,18 +31,19 @@
       </el-table-column>
       <el-table-column prop="pagePhysicalPath" label="物理路径" width="250">
       </el-table-column>
-      <el-table-column prop="pageCreateTime" label="创建时间" width="180">
-      </el-table-column>
+     <!-- <el-table-column prop="pageCreateTime" label="创建时间" width="180">
+      </el-table-column> -->
       <el-table-column prop="siteId" label="siteId" width="180">
       </el-table-column>
 
       <!-- 添加操作列 -->
-      <el-table-column label="操作" width="120">
+      <el-table-column label="操作" width="180">
         <template slot-scope="page">
           <el-button size="small" type="text" @click="edit(page.row.pageId)">编辑
           </el-button>
           <el-button size="small" type="text" @click="del(page.row.pageId)">删除
           </el-button>
+          <el-button @click="preview(page.row.pageId)" type="text" size="small">页面预览</el-button>
         </template>
       </el-table-column>
 
@@ -133,6 +134,10 @@
                    this.$message.info('已取消!');
                  });;
       },
+      //页面预览
+      preview(pageId){
+          window.open("http://localhost/cms/preview/"+pageId)
+      }
 
     },
 
